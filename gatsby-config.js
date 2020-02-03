@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/gatsby-panda-blog",
   siteMetadata: {
     title: `A blog Page about Pandas!`,
     author: `Dominik Żmudziak`,

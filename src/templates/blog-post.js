@@ -9,14 +9,17 @@ export default ({ data }) => {
   const post = data.markdownRemark
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: post.frontmatter.title },
+    config: { identifier: data },
   }
+  
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: JSON.stringify(data)}} />
+        
       </div>
       <Global>
           <DiscussionEmbed {...disqusConfig} />
