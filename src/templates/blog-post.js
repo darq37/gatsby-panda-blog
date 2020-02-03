@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 export default ({ data: { markdownRemark }, pageContext: { slug } }) => {
   const post = markdownRemark;
   const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
+    shortname: "PandaWebDev",
     config: { identifier: slug },
   }
 
