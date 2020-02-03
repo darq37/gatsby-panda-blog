@@ -1,17 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
-import {DiscussionEmbed} from "disqus-react"
+import { DiscussionEmbed } from "disqus-react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Global } from "@emotion/core"
 
-const disqusConfig = {
-  shortname: process.env.GATSBY_DISQUS_NAME,
-  config: {identifier: slug, title},
-}
-
 export default ({ data }) => {
   const post = data.markdownRemark
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: post.frontmatter.title },
+  }
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -20,10 +19,8 @@ export default ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
       <Global>
-        <PageBody>
-          <DiscussionEmbed {...disqusConfig}/>
-        </PageBody>
-      </Global>
+          <DiscussionEmbed {...disqusConfig} />
+        </Global>
     </Layout>
   )
 }

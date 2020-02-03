@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `A blog about Pandas`,
+    title: `A blog Page about Pandas!`,
     author: `Dominik Żmudziak`,
-    description: "BLog-post single page application",
+    description: "Blog-post single page application",
   },
   plugins: [
     {
