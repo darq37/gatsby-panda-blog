@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{"3XHS":function(t,n,e){"use strict";e.r(n),e.d(n,"query",(function(){return l}));e("q1tI");var a=e("Bl7J"),i=e("qKvR");n.default=function(t){var n=t.data;return Object(i.b)(a.a,null,Object(i.b)("h1",null,"About ",n.site.siteMetadata.title),Object(i.b)("p",null,"SImple Single Page Application for adding blog posts."))};var l="1097489062"}}]);
+//# sourceMappingURL=component---src-pages-about-js-f6ff7be8f51681fcba80.js.map
