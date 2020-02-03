@@ -4,16 +4,46 @@ html {
   font-family: "Oswald", sans-serif;
   background-color: rgb(143, 214, 143);
 }
-.notactive {
-    font-family: "Oswald", sans-serif;
-    color: black;
+.myButton {
+	background-color:#44c767;
+	border-radius:22px;
+	border:3px solid #18ab29;
+	display:right;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding:10px 38px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#db1f2f;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.links {
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+    text-decoration:none;
     float: right;
-    margin: 10px;
+}
+.links:hover {
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	background-color:#68a54b;
+}
+.links:active {
+	position:relative;
+	top:1px;
 }
 
-.active{
-    font-family: "Bebas Neue", cursive;
-    color: red;
-    float: right;
-    margin: 10px;
-}

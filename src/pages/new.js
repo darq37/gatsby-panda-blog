@@ -9,7 +9,7 @@ export default ({ data }) => {
         <form enctype="multipart/form-data" action="/pages" method="post">
           <input id="addfile" type="file" />
         </form>
-        <button> Opublikuj</button>
+        <center><a href="#" class="myButton">Dodaj plik</a></center>
       </div>
 
     </Layout>

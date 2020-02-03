@@ -35,14 +35,13 @@ export default ({ children }) => {
           {data.site.siteMetadata.title}
         </h3>
       </Link>
-      <Link to={`/about/`} className="notactive" activeClassName="active">
+      <Link to={`/about/`} className="links">
         About
       </Link>
-
-      <Link to={`/my-files/`} className="notactive" activeClassName="active">
+      <Link to={`/my-files/`} className="links">
         Pliki
       </Link>
-      <Link to={`/new/`} className="notactive" activeClassName="active">
+      <Link to={`/new/`} className="links">
         Dodaj plik
       </Link>
 
