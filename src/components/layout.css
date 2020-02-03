@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald);
+
+html {
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(143, 214, 143);
+}
+.notactive {
+    font-family: "Oswald", sans-serif;
+    color: black;
+    float: right;
+    margin: 10px;
+}
+
+.active{
+    font-family: "Bebas Neue", cursive;
+    color: red;
+    float: right;
+    margin: 10px;
+}

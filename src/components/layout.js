@@ -2,6 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
+import "./layout.css"
 export default ({ children }) => {
   const data = useStaticQuery(
     graphql`
@@ -28,40 +29,23 @@ export default ({ children }) => {
           css={css`
             margin-bottom: ${rhythm(2)};
             display: inline-block;
-            font-style: normal;
+            font-family: "Oswald", sans-serif;
           `}
         >
           {data.site.siteMetadata.title}
         </h3>
       </Link>
-      <Link
-        to={`/about/`}
-        css={css`
-          float: right;
-        `}
-      >
+      <Link to={`/about/`} className="notactive" activeClassName="active">
         About
       </Link>
 
-      <Link
-        to={`/my-files/`}
-        css={css`
-          float: right;
-          margin: 0px 10px 0px 0px;
-        `}
-      >
+      <Link to={`/my-files/`} className="notactive" activeClassName="active">
         Pliki
       </Link>
-      <Link
-        to={`/new/`}
-        css={css`
-          float: right;
-          margin: 0px 10px 0px 0px;
-        `}
-      >
+      <Link to={`/new/`} className="notactive" activeClassName="active">
         Dodaj plik
       </Link>
-      
+
       {children}
     </div>
   )
