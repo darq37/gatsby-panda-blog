@@ -43,6 +43,26 @@ export default ({ children }) => {
       >
         About
       </Link>
+
+      <Link
+        to={`/my-files/`}
+        css={css`
+          float: right;
+          margin: 0px 10px 0px 0px;
+        `}
+      >
+        Pliki
+      </Link>
+      <Link
+        to={`/new/`}
+        css={css`
+          float: right;
+          margin: 0px 10px 0px 0px;
+        `}
+      >
+        Dodaj plik
+      </Link>
+      
       {children}
     </div>
   )
