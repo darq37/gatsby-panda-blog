@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{GLJr:function(t,e,a){"use strict";a.r(e);a("q1tI");var n=a("Bl7J"),o=a("qKvR");e.default=function(t){t.data;return Object(o.b)(n.a,null,Object(o.b)("div",null,Object(o.b)("p",null," Dodaj Nowy post w formacie Markdown "),Object(o.b)("form",{enctype:"multipart/form-data",action:"/pages",method:"post"},Object(o.b)("input",{id:"addfile",type:"file"})),Object(o.b)("center",null,Object(o.b)("a",{href:"/",class:"myButton"},"Dodaj plik"))))}}}]);
+//# sourceMappingURL=component---src-pages-new-js-c4a1d4723e7af4203ad8.js.map
