@@ -22,6 +22,7 @@ export default ({ data: { markdownRemark }, pageContext: { slug } }) => {
             text-align: center;
           `}>
         <h1>{post.frontmatter.title}</h1>
+        <h2>{post.frontmatter.date}</h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
       <DiscussionEmbed {...disqusConfig} />
@@ -34,6 +35,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        date(formatString: "MMMM DD, YYYY")
         title
       }
       excerpt

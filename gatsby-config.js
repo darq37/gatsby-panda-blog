@@ -37,5 +37,13 @@ module.exports = {
         icon: `src/images/panda-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-source-mongodb`,
+      options: {
+        dbName: `PandaBase`,
+        collection: [`Posts`],
+        connectionString: `mongodb+srv://darq37:ijiwyki1@pandacluster-jfmxq.mongodb.net/test?retryWrites=true&w=majority`,
+      },
+    },
   ],
 }

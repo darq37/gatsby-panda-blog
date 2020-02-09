@@ -12,6 +12,7 @@ export default ({ data }) => {
           css={css`
             display: inline-block;
             border-bottom: 1px solid;
+            color: white;
           `}
         >
           Witaj na moim blogu! Poczytaj sobie lub wstaw własny post :)
@@ -34,7 +35,7 @@ export default ({ data }) => {
                 {node.frontmatter.title}{""}
                 <span
                   css={css`
-                    color: gray;
+                    color: black;
                   `}
                 >
                   — {node.frontmatter.date}

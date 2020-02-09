@@ -30,6 +30,7 @@ export default ({ children }) => {
             margin-bottom: ${rhythm(2)};
             display: inline-block;
             font-family: "Oswald", sans-serif;
+            color: white;
           `}
         >
           {data.site.siteMetadata.title}
