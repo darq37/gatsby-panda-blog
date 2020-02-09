@@ -6,7 +6,7 @@ export default ({ data }) => (
   <Layout>
     <h1>About {data.site.siteMetadata.title}</h1>
     <p>
-      SImple Single Page Application for adding blog posts.
+      Simple Single Page Application for adding blog posts.
     </p>
   </Layout>
 )

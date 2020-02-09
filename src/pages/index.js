@@ -17,11 +17,11 @@ export default ({ data }) => {
         >
           Witaj na moim blogu! Poczytaj sobie lub wstaw własny post :)
         </h1>
-        <h4>{data.allMarkdownRemark.totalCount} posty</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        <h4>{data.allMongodbPandaBasePosts.totalCount} posty</h4>
+        {data.allMongodbPandaBasePosts.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
-              to={node.fields.slug}
+              to={node.id}
               css={css`
                 text-decoration: none;
                 color: inherit;
@@ -32,16 +32,16 @@ export default ({ data }) => {
                   margin-bottom: ${rhythm(1 / 4)};
                 `}
               >
-                {node.frontmatter.title}{""}
+                {node.title}{""}
                 <span
                   css={css`
                     color: black;
                   `}
                 >
-                  — {node.frontmatter.date}
+                  — {node.date}
                 </span>
               </h3>
-              <p>{node.excerpt}</p>
+              <p>{node.description}</p>
             </Link>
           </div>
         ))}
@@ -52,21 +52,17 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
+    allMongodbPandaBasePosts {
       edges {
         node {
           id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
-          excerpt
+          title
+          content
+          description
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }
   }
+  
 `

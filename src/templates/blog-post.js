@@ -5,25 +5,24 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { css } from "@emotion/core"
 
-export default ({ data: { markdownRemark }, pageContext: { slug } }) => {
-  const post = markdownRemark
+export default ({ data: { mongodbPandaBasePosts }}) => {
+  const post = mongodbPandaBasePosts
   const disqusConfig = {
     shortname: "PandaWebDev",
-    config: { identifier: slug },
+    config: { identifier: post.id },
   }
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <SEO title={post.title} description={post.description}/>
       <div
             css={css`
             margin: 0 auto;
             max-width: 700px;
             text-align: center;
           `}>
-        <h1>{post.frontmatter.title}</h1>
-        <h2>{post.frontmatter.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
       <DiscussionEmbed {...disqusConfig} />
     </Layout>
@@ -31,14 +30,21 @@ export default ({ data: { markdownRemark }, pageContext: { slug } }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-      }
-      excerpt
-    }
+query {
+  mongodbPandaBasePosts {
+    date
+    id
+    description
+    content
+    title
   }
+}
 `
+
+/*const PostObject = {
+  id: "string",
+  title: "zx",
+  description: "",
+  date: "RRRR-MM-DD",
+  content: "zxcaas"
+}*/

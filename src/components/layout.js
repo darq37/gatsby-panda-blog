@@ -37,10 +37,7 @@ export default ({ children }) => {
         </h3>
       </Link>
       <Link to={`/about/`} className="links">
-        About
-      </Link>
-      <Link to={`/my-files/`} className="links">
-        Pliki
+        O stronie
       </Link>
       <Link to={`/new/`} className="links">
         Dodaj plik
