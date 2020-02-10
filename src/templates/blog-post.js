@@ -41,10 +41,3 @@ query {
 }
 `
 
-/*const PostObject = {
-  id: "string",
-  title: "zx",
-  description: "",
-  date: "RRRR-MM-DD",
-  content: "zxcaas"
-}*/

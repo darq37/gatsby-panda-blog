@@ -40,8 +40,7 @@ module.exports = {
       options: {
         dbName: `PandaBase`,
         collection: [`Posts`],
-        connectionString: `mongodb+srv://darq37:ijiwyki1@pandacluster-jfmxq.mongodb.net/test?retryWrites=true&w=majority`,
-        //map: { Posts: { content: `text/markdown` } }
+        connectionString: `mongodb+srv://darq37:ijiwyki1@pandacluster-jfmxq.mongodb.net/test?retryWrites=true&w=majority`
       },
     },
   ],
