@@ -57,7 +57,6 @@ export const query = graphql`
         node {
           id
           title
-          content
           description
           date(formatString: "MMMM DD, YYYY")
         }

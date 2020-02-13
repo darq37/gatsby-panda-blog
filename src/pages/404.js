@@ -7,7 +7,7 @@ export default ({ data }) => {
     <Layout>
       <div>
       <p> Przykro mi, nie zaimplementowano jeszcze tej funkcji </p>
-      <img src={require('../images/sad.jpg')}  alt="Sad Panda"/>
+      <img src={require('../images/sadPanda.jpg')}  alt="Sad Panda"/>
       <Link to="/">Powrót na stronę główną</Link>
       </div>
     </Layout>

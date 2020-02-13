@@ -5,8 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { css } from "@emotion/core"
 
-export default ({ data: { mongodbPandaBasePosts } }) => {
-  const post = mongodbPandaBasePosts
+export default ({ data }) => {
+  const post = data.mongodbPandaBasePosts
   const disqusConfig = {
     shortname: "PandaWebDev",
     config: { identifier: post.id },
@@ -19,11 +19,15 @@ export default ({ data: { mongodbPandaBasePosts } }) => {
         css={css`
           margin: 0 auto;
           max-width: 700px;
-          text-align: center;+
+          text-align: center;
         `}
       >
         <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: post.content.childMarkdownRemark.html,
+          }}
+        />
       </div>
       <DiscussionEmbed {...disqusConfig} />
     </Layout>
@@ -31,13 +35,17 @@ export default ({ data: { mongodbPandaBasePosts } }) => {
 }
 
 export const query = graphql`
-  query ($id: String!){
-    mongodbPandaBasePosts (id: { eq: $id }) {
+  query($id: String!) {
+    mongodbPandaBasePosts(id: { eq: $id }) {
+      content {
+        childMarkdownRemark {
+          html
+        }
+      }
       date
       id
-      description
-      content
       title
+      description
     }
   }
 `
